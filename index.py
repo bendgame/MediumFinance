@@ -47,11 +47,11 @@ layout1 = html.Div([
                         ])
                 , dbc.Row([make_card("select ticker", "warning", "select ticker")],id = 'cards') #row 2
                 , dbc.Row([
-                        dbc.Col([#dbc.Row([dbc.Alert("________________________Data________________________", color="primary")], justify = 'center'),
-                                #,dbc.Row([dbc.Col(make_card("Twitter Options info", 'primary', make_table('table-sorting-filtering',df, '17px', 8)))])
-                                
-                                
-                                dbc.Row([make_card("Wallstreet Bets New Posts", 'primary',[html.P(html.Button('Refresh', id='refresh')), make_table('table-sorting-filtering', dfr, '17px', 4)])], justify = 'center')
+                        dbc.Col([ 
+                          dbc.Row([make_card("Wallstreet Bets New Posts", 'primary'
+                                             ,[html.P(html.Button('Refresh', id='refresh'))
+                                               , make_table('table-sorting-filtering', dfr, '17px', 4)])
+                                  ], justify = 'center')
                                 ])
 
                         ,dbc.Col([dbc.Row([dbc.Alert("________________________Charts________________________", color="primary")], justify = 'center')
